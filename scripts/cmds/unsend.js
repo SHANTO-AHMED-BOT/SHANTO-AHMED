@@ -1,16 +1,12 @@
-module.exports = {
+const { GoatWrapper } = require("fca-liane-utils");module.exports = {
 	config: {
 		name: "unsend",
-		aliases: ["u","uns","r"],
-    version: "1.1",
+		aliases: ["rmv", "u", "uns"],
+		version: "1.2",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		shortDescription: {
-			vi: "Gỡ tin nhắn của bot",
-			en: "Unsend bot's message"
-		},
-		longDescription: {
+		description: {
 			vi: "Gỡ tin nhắn của bot",
 			en: "Unsend bot's message"
 		},
@@ -36,3 +32,5 @@ module.exports = {
 		message.unsend(event.messageReply.messageID);
 	}
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
