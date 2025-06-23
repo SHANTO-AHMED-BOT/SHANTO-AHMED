@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "de",
+    name: "uns", "unsent",
     aliases: ["del"],
     author: "BaYjid",
 role: 2,
